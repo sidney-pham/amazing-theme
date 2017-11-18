@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{ post.title }</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <script src="https://use.fontawesome.com/32b00ec458.js" defer></script>
+</head>
+<body>
+  { include header }
+  <main>
+    <article>
+        <header>
+          <h1><a href="/{ post.slug }.html" title="Permalink">{ post.title }</a></h1>
+          <address>Published <time>{ post.date }</time> by { config.author }</address>
+        </header>
+        <div class="content">
+          { post.content }
+        </div>
+    </article>
+    <nav class="more-posts">
+      <ul>
+        { if prev }
+          <li id="previous-post"><h3>Previous Post: <a rel="prev" href="/{ prev.slug }.html">{ prev.title }</a></h3></li>
+        { end }
+        { if next }
+          <li id="next-post"><h3>Next Post: <a rel="next" href="/{ next.slug }.html">{ next.title }</a></h3></li>
+        { end }
+      </ul>
+    </nav>
+  </main>
+  { include footer }
+</body>
+</html>

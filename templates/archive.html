@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{ config.name }</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <script src="https://use.fontawesome.com/32b00ec458.js" defer></script>
+</head>
+<body>
+  { include header }
+  <main>
+    <ul class="post-archive">
+      { for post in posts }
+      <li>
+          <h3><a href="/{ post.slug }.html">{ post.title }</a></h3>
+          <small><time>{ post.date }</time></small>
+      </li>
+      { end }
+    </ul>
+  </main>
+  { include footer }
+</body>
+</html>

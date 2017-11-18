@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{ config.name }</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <script src="https://use.fontawesome.com/32b00ec458.js" defer></script>
+</head>
+<body>
+  { include header }
+  <main>
+    { for post in posts }
+    <article>
+      <header>
+        <h1><a href="/{ post.slug }.html" title="Permalink">{ post.title }</a></h1>
+        <address>Published <time>{ post.date }</time> by { config.author }</address>
+      </header>
+      <div class="content">
+        { post.content }
+      </div>
+    </article>
+    { end }
+  </main>
+  { include footer }
+</body>
+</html>

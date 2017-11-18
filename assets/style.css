@@ -1,0 +1,185 @@
+* { box-sizing: border-box; }
+
+html {
+  background-color: white;
+}
+
+body {
+  background-color: white;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.header-nav {
+  padding: 0 5vw;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-nav h1 a {
+  font-size: 25px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-nav i {
+  margin-right: .2em;
+}
+
+@media (max-width: 600px) {
+  .header-nav i {
+    display: none !important;
+    margin-right: 0;
+  }
+}
+
+.header-nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav ul li {
+  margin: 0;
+}
+
+.header-nav ul li a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: normal;
+  padding: 20px;
+}
+
+.header-nav ul li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  width: 900px;
+  margin: 0 auto;
+}
+
+article {
+  padding: 40px 50px;
+  border-bottom: 1px dotted black;
+  text-align: center;
+}
+
+article:first-of-type {
+  padding-top: 0;
+}
+
+article:last-of-type {
+  border-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  main {
+    width: 100vw;
+    padding: 0 20px;
+  }
+
+  article {
+    padding: 20px 0;
+  }
+}
+
+article > header > address {
+  margin-top: 5px;
+  font-size: 15px;
+}
+
+article > header > h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+article > header > h1 a {
+  text-decoration: underline;
+}
+
+.content {
+  text-align: left;
+  font-family: Georgia, Times, Serif;
+  font-family: 'Lato';
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.content a {
+  text-decoration: none;
+}
+
+.content code {
+  font-size: 15px;
+}
+
+a {
+  color: #0096cc;
+}
+
+.more-posts ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0 0 40px;
+}
+
+.more-posts #previous-post {
+  display: inline-block;
+  margin-right: auto;
+}
+
+.more-posts #next-post {
+  display: inline-block;
+  margin-left: auto;
+}
+
+.more-posts h3 {
+  margin: 0;
+}
+
+footer {
+  height: 200px;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer h3 {
+  margin: 0;
+  font-weight: lighter;
+  font-family: sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+/* -------------------------------------------------------------------------- */
+/* Archive */
+/* -------------------------------------------------------------------------- */
+.post-archive {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-archive li {
+  padding: 20px;
+  border-top: 1px dashed black;
+}
+
+.post-archive li:last-of-type {
+  border-bottom: 1px dashed black;
+}
+
+.post-archive h3 {
+  display: inline-block;
+  margin: 0;
+}
